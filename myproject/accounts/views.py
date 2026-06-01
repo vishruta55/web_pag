@@ -15,7 +15,7 @@ def register(request):
             messages.error(request, "Username already exists")
         else:
             User.objects.create_user(username=username, password=password)
-            messages.success(request, "Account created! Please login")
+            messages.success(request, "Account created!")
 
     return redirect("home")
 
